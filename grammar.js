@@ -280,7 +280,7 @@ module.exports = grammar({
 
     string: $ => token(choice(
       seq("'", /([^']|'')*/, "'"),
-      seq('"', /([^"]|\\")*/, '"')
+      seq('"', /([^"\\]|\\.)*/, '"')
     )),
 
     bareword: $ => /[\p{L}\p{N}!%+,./:@\\_~=-]+/,

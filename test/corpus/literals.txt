@@ -4,9 +4,11 @@ Strings
 
 nop '*\' 'it''s'
 nop "my name is $name" "quoted \" test"
+nop "double escape \\" ""
 
 ---
 (source_file
+  (command (identifier) (string) (string))
   (command (identifier) (string) (string))
   (command (identifier) (string) (string)))
 
