@@ -64,6 +64,8 @@ Conditional
 
 if $false {
   nop
+} elif $false {
+  nop
 } elif $true {
   nop
 } else {
@@ -73,6 +75,7 @@ if $false {
 ---
 (source_file
   (if (variable (identifier)) (chunk (command (identifier)))
+    (elif (variable (identifier)) (chunk (command (identifier))))
     (elif (variable (identifier)) (chunk (command (identifier))))
     (else (chunk (command (identifier))))))
 

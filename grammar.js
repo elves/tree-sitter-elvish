@@ -153,7 +153,7 @@ module.exports = grammar({
     if: $ => seq(
       "if", field("condition", $._expression),
       "{", alias($._statements, $.chunk), "}",
-      optional($.elif),
+      repeat($.elif),
       optional($.else),
     ),
 
